@@ -5,6 +5,9 @@ To test the code in your local machine you have to download the Yelp Challenge D
 
 I provided the list of 5000 most common words in english from http://www.wordfrequency.info/top5000.asp so you don't need to download it.
 
+You have to install mrjob who lets you write MapReduce jobs in Python 2.6+ and run them on several platforms:  $ pip install mrjob.
+
+
 #How to run the code?
 
 1. Clone the content of the SemesterProject repository
