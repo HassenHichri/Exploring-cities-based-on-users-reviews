@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # SemesterProject
 =======
 #ReadMe
@@ -22,4 +22,4 @@ You have to install mrjob who lets you write MapReduce jobs in Python 2.6+ and r
 7. Run: $ agglom_clusters.py
 8. When asked for the input file choose the output file of the step 7. ( [category].txt )
 9. Enter the tokheim-baker coefficient and wait for clusters to be formed. 
->>>>>>> 8a2b0a1ef4dfcbe99535ea9cc9c08b9478975dff
+
