@@ -10,6 +10,12 @@ I provided the list of 5000 most common words in english from http://www.wordfre
 
 You have to install mrjob who lets you write MapReduce jobs in Python 2.6+ and run them on several platforms:  $ pip install mrjob.
 
+From the Academic Dataset you have to create some sub-datasets:
+ * yelp_business.json - extracted all business listings from yelp_academic_dataset:
+    grep 'type": "business' yelp_academic_dataset.json > yelp_businesses.json
+ * review_set25000.json - manageable sized set of reviews:
+    grep -m 25000 'type": "review' yelp_academic_dataset.json > review_set25000.json    
+ * review_set.json - huge file of all the reviews. use if you have a powerful processor.    
 
 #How to run the code?
 
