@@ -2,7 +2,7 @@
 # SemesterProject
 =======
 #ReadMe
-I started my work from the work proposed by Samuel Tokheim provided in this link https://github.com/samtokheim/datamining-yelp-categories
+I started my work from the work proposed by Samuel Tokheim and Ryan Baker
 
 To test the code in your local machine you have to download the Yelp Academic Dataset from the link here https://www.yelp.com/academic_dataset . Then, unzip it in the code directory.
 
