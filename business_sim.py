@@ -10,12 +10,13 @@ class BusinessSim(MRJob):
     
     # go through each review - if the business category is in businesses dict, yield the business_id and the word.
     def get_words(self, _, record):    
-        if record['type'] == 'review':
-            #Turn the string or review words into a list
-            words = list(record['text'])            
-            #Iterate through each word in the review
-            for word in words:                   
-                yield record['business_id'], word            
+        #Turn the string or review words into a list
+        words = list(record['review']['value'])
+        bis_id = re.split('\/',record['id']['value'])
+        bisunid = bis_id[-1]
+        #Iterate through each word in the review
+        for word in words:                   
+            yield bisunid, word            
         
     # create word set for each business_id
     def get_word_set(self, business_id, words):    
