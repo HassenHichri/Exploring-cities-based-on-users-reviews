@@ -12,14 +12,15 @@ You have to install mrjob who lets you write MapReduce jobs in Python 2.6+ and r
 
 The 3cixty dataset can be downloaded from www.3city.eurecom.fr/sparql by running this sparql query:
 
-						select distinct ?s ?o1 as ?review ?id ?category where {
-						?s a schema:Review;
-						schema:reviewBody ?o1;
-						schema:itemReviewed ?o.
-						?o owl:sameAs ?id;
-						locationOnt:businessType ?category.
-						FILTER ( lang(?o1) = "en" || lang(?o1) = "en-tr" )
-						}
+ select distinct ?s ?o1 as ?review ?id ?category ?top where {
+  ?s a schema:Review;
+  schema:reviewBody ?o1;
+  schema:itemReviewed ?o.
+  ?o owl:sameAs ?id;
+  locationOnt:businessType ?category;
+  locationOnt:businessTypeTop ?top .
+  FILTER ( lang(?o1) = "en" || lang(?o1) = "en-tr" )
+ }
 PS: You can use 3cixty_dataset.json that you find in this repository
 
 #How to run the code?
