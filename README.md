@@ -1,7 +1,7 @@
 
 # SemesterProject
 =======
-#ReadMe
+
 This work is part of 3cixty project (www.3cixty.com).
 
 In this project, we aim to identify sub-categories for predefined categories for restaurants in the 3cixty dataset using data mining techniques on review text contents.
