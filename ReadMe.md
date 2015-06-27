@@ -26,6 +26,7 @@ The 3cixty dataset can be downloaded from www.3city.eurecom.fr/sparql by running
 PS: You can use 3cixty_dataset_top.json that you find in this repository. It respects the formatting for loading it with python.
 
 The Yelp Academic Dataset is available via this link: www.yelp.com/academic_dataset. Once downloaded, you have to create two sub-datasets (one for reviews and one for businesses). To do so, run this shell commands on your terminal:
+
 		grep 'type": "business' yelp_academic_dataset.json > yelp_businesses.json
 		grep 'type": "review' yelp_academic_dataset.json > review_set.json 
 
