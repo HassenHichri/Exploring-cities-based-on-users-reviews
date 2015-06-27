@@ -46,5 +46,5 @@ The Yelp Academic Dataset is available via this link: www.yelp.com/academic_data
 
 #References
 
-This work was inspired by the work done by Ryan Baker and Sam Tokheim from UC Berkley School of Information (http://www.ischool.berkeley.edu/courses/i290-dma) and "Generating Recommendation Dialogs by Extracting Information from User Reviews" done by Dan Jurafsky, Adam Vogel and Kevin Reschke (http://nlp.stanford.edu/projects/yelp.shtml)
+This work was inspired by the work done by Ryan Baker and Sam Tokheim from UC Berkley School of Information (http://www.ischool.berkeley.edu/courses/i290-dma) and "Generating Recommendation Dialogs by Extracting Information from User Reviews" done by Dan Jurafsky, Adam Vogel and Kevin Reschke from Stanford University (http://nlp.stanford.edu/projects/yelp.shtml)
 
