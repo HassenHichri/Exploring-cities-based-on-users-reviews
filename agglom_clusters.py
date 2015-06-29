@@ -36,53 +36,10 @@ def getClusters(businesses):
     
 def agglomClusters(clusters, coefficient, iterCount=1):
 
-    """
-    This is the recursive formula to build up membership in each cluster by merging them with each other based on similarity.
-
-    Pseudocode:
-    
-    if len(clusters) reaches a certain length, or other stop case,
-        return clusters
-    
-    else:    
-        for each cluster c:
-            cluster_max_jaccards = []
-            for each business b in the cluster:
-                max_jaccards = []
-                find the business k in any other cluster that has the highest jaccard to business b (this will utilize the businesses dictionary)
-                    append (business_id, jaccard, cluster_id) of business k to max_jaccards
-                after filling up max_jaccards, find the max of all the jaccards. (this will represent the closest neighbor to any point in the cluster)
-                append cluster_max_jaccards with (cluster_id, max_jaccard)
-                
-            get the cluster_id that has the highest max_jaccard in cluster_max_jaccards
-        
-        do the same max jaccard test for all points in all clusters. find the highest-jaccard pair in the whole data set.
-        merge cluster 1 into cluster 2, by appending cluster1['cluster_businesses'] with cluster2['cluster_businesses'].
-        del cluster 2
-                        
-        we now have a new clusters dictionary - call recursive formula
-        return agglomClusters(clusters)
-    
-    """
 
     cluster_len = len(clusters)
 
     tokheim_baker_coefficient = float(coefficient) # this is the critial tokheim-baker coefficient.
-    
-    """
-    The tokheim-baker coefficient:
-    
-    Cluster formation will stop when two clusters have this ratio of total businesses in their cluster. For instance, if there are 100 total 
-    businesses, and we set a coefficient of 0.33, recursion will stop when two clusters have at least 33 businesses in them. This is
-    a critical coefficient to get right so that underclustering and overclustering do not occur. 
-    
-    A low coefficient means the expected segmentability of the businesses set is low. Use a low coefficient when clear delineations are not expected.
-    
-    A high coefficient means the expected segmentability is high. If you anticipate two clear clusters to emerge, use a higher coefficient.
-    
-    In general, start low, then increase. Maximum is 0.5.    
-    
-    """
 
     target_cluster_size = cluster_len * tokheim_baker_coefficient
     
